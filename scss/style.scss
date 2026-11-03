@@ -1,0 +1,157 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-family: "TT Lakes", sans-serif;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Bold.woff");
+  src:
+    local("TT Lakes Bold"),
+    local("TTLakes-Bold"),
+    url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-BoldItalic.woff");
+  src:
+    local("TT Lakes Bold Italic"),
+    local("TTLakes-BoldItalic"),
+    url("../fonts/TTLakes-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Medium.woff");
+  src:
+    local("TT Lakes Medium"),
+    local("TTLakes-Medium"),
+    url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-MediumItalic.woff");
+  src:
+    local("TT Lakes Medium Italic"),
+    local("TTLakes-MediumItalic"),
+    url("../fonts/TTLakes-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Regular.woff");
+  src:
+    local("TT Lakes Regular"),
+    local("TTLakes-Regular"),
+    url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.brands {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  row-gap: 16px;
+  margin: 0 auto;
+  padding: 0 16px;
+  border-top: 1px solid #d9fff5;
+  background-color: #f8f8f8;
+
+  &__title {
+    padding-top: 16px;
+    background: linear-gradient(to right, #f8f8f8 50%, #f8f8f6 50%, white 100%);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7e7e82;
+  }
+  &__list {
+    background-color: #f8f8f8;
+    padding-bottom: 32px;
+  }
+}
+
+.brand-list {
+  &__item {
+  }
+
+  &__btn {
+    width: 240px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+    }
+    &:active {
+      border: 1px solid pink;
+    }
+  }
+
+  &__enter {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ff3e79;
+    border-radius: 50%;
+    background: url("../icons/dropdown.svg") center center / contain no-repeat;
+    background-size: auto, auto;
+  }
+}
