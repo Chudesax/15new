@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="css/modern-normalize.min.css" />
     <link rel="stylesheet" href="css/style-min.css" />
     <title>CPS 1.5</title>
@@ -11,14 +16,97 @@
     <section class="brands">
       <h2 class="brands__title">Ремонт техники различных брендов</h2>
 
-      <ul class="brands__list brand-list">
-        <li class="brand-list__item">
-          <button class="brand-list__btn" href="#">
-            <img class="brand-list__logo" src="img/lenovo.svg" alt="Lenovo" />
-            <div class="brand-list__enter"></div>
-          </button>
-        </li>
-      </ul>
+      <div class="brands__list-wrapper swiper">
+        <ul class="brands__list brand-list swiper-wrapper">
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/lenovo.svg" alt="Lenovo" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img
+                class="brand-list__logo"
+                src="img/samsung.png"
+                alt="Samsung"
+              />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/bosch.png" alt="bosch" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/hp.png" alt="hp" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/apple.png" alt="apple" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/sony.png" alt="Lenovo" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/lenovo.svg" alt="Lenovo" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img
+                class="brand-list__logo"
+                src="img/samsung.png"
+                alt="Samsung"
+              />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/sony.png" alt="Lenovo" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/apple.png" alt="apple" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+
+          <li class="brand-list__item swiper-slide">
+            <button class="brand-list__btn" href="#">
+              <img class="brand-list__logo" src="img/lenovo.svg" alt="Lenovo" />
+              <div class="brand-list__enter"></div>
+            </button>
+          </li>
+        </ul>
+
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

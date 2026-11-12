@@ -35,10 +35,21 @@ img {
   max-inline-size: 100%;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+
 html {
   font-family: "TT Lakes", sans-serif;
 }
@@ -98,18 +109,33 @@ html {
   font-style: normal;
 }
 
+.swiper {
+  width: 320px;
+  min-height: 120px;
+
+  &-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #dddddd;
+    &-active {
+      background-color: #b5b6bc;
+    }
+  }
+}
+
 .brands {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   width: 320px;
   row-gap: 16px;
   margin: 0 auto;
-  padding: 0 16px;
   border-top: 1px solid #d9fff5;
   background-color: #f8f8f8;
+  border-top: 2px solid #d9fff5;
 
   &__title {
-    padding-top: 16px;
+    padding: 16px;
     background: linear-gradient(to right, #f8f8f8 50%, #f8f8f6 50%, white 100%);
     font-size: 16px;
     line-height: 24px;
@@ -121,11 +147,15 @@ html {
     background-color: #f8f8f8;
     padding-bottom: 32px;
   }
+
+  &__list-wrapper {
+    padding: 0 16px;
+  }
 }
 
 .brand-list {
-  &__item {
-  }
+  // &__item {
+  // }
 
   &__btn {
     width: 240px;
