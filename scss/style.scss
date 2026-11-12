@@ -110,7 +110,7 @@ html {
 }
 
 .swiper {
-  width: 320px;
+  width: clamp(320px, 100vw, 767px);
   min-height: 120px;
 
   &-pagination-bullet {
@@ -127,7 +127,7 @@ html {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  width: 320px;
+  width: clamp(320px, 100vw, 767px);
   row-gap: 16px;
   margin: 0 auto;
   border-top: 1px solid #d9fff5;
@@ -173,6 +173,8 @@ html {
     }
     &:active {
       border: 1px solid pink;
+      transform: scale(0.9);
+      transition: 0.1s;
     }
   }
 
