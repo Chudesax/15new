@@ -1,25 +1,47 @@
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
-const swiper = new Swiper(".swiper", {
-  direction: "horizontal",
-  loop: false,
-  slidesPerView: "1.1",
-  spaceBetween: 16,
+let swiper = null;
 
-  breakpoints: {
-    475: {
-      slidesPerView: 1.8,
-      spaceBetween: 30,
-    },
+function toggleSwiper() {
+  if (window.innerWidth < 768) {
+    if (swiper) return;
 
-    700: {
-      slidesPerView: 2.7,
-      spaceBetween: 30,
-    },
-  },
+    swiper = new Swiper(".swiper", {
+      slidesPerView: 1.2,
+      loop: true,
+      spaceBetween: 20,
 
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+      breakpoints: {
+        425: {
+          slidesPerView: 1.5,
+          spaceBetween: 30,
+        },
+
+        535: {
+          slidesPerView: 1.8,
+          spaceBetween: 5,
+        },
+
+        650: {
+          slidesPerView: 2.5,
+          spaceBetween: 5,
+        },
+      },
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    return;
+  }
+
+  if (swiper) {
+    swiper.destroy(true, true);
+    swiper = null;
+  }
+}
+
+toggleSwiper();
+window.addEventListener("resize", toggleSwiper);
