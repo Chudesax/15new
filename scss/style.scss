@@ -117,13 +117,22 @@ html {
     width: 12px;
     height: 12px;
     background-color: #dddddd;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     &-active {
       background-color: #b5b6bc;
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
     }
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
-.brands {
+.signs {
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -147,19 +156,20 @@ html {
     color: #7e7e82;
   }
 
-  &__list {
-    background-color: #f8f8f8;
-    padding-bottom: 32px;
+  &__list-wrapper {
+    padding: 0 16px;
+
     @media screen and (min-width: 768px) {
-      padding-bottom: 0;
+      display: block;
+      width: clamp(768px, 100vw, 1120px);
+      padding: 0 24px;
     }
   }
 
-  &__list-wrapper {
-    padding: 0 16px;
+  &__list {
+    padding-bottom: 32px;
     @media screen and (min-width: 768px) {
-      width: clamp(768px, 100vw, 1120px);
-      padding: 24px;
+      padding-bottom: 0;
     }
   }
 }
@@ -167,11 +177,12 @@ html {
 .brand-list {
   @media screen and (min-width: 768px) {
     display: grid;
-    grid-template-columns: repeat(3, minmax(224px, 240px));
+    grid-template-columns: repeat(3, minmax(224px, 300px));
     grid-template-rows: repeat(2, 72px);
-    width: clamp(768px, 80vw, 1120px);
+    justify-content: center;
     row-gap: 16px;
-    column-gap: clamp(24px, 2rem, 48px);
+    column-gap: clamp(24px, 3rem, 48px);
+    background-color: #f8f8f8;
     &__item:nth-last-child(-n + 5) {
       display: none;
     }
