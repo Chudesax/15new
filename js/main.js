@@ -45,3 +45,20 @@ function toggleSwiper() {
 
 toggleSwiper();
 window.addEventListener("resize", toggleSwiper);
+//кнопка
+const showMoreButton = document.querySelector(".show-more");
+const showMoreIcon = document.querySelector(".show-more__icon");
+const showMoreText = document.querySelector(".show-more__text");
+//карточки
+const brandsList = document.querySelector(".repair__brands");
+
+showMoreButton.addEventListener("click", function () {
+  showMoreIcon.classList.toggle("show-more__icon--rotated");
+  brandsList.classList.toggle("repair__brands--visible");
+
+  if (showMoreText.textContent === "Показать все") {
+    showMoreText.textContent = "Скрыть";
+  } else {
+    showMoreText.textContent = "Показать все";
+  }
+});

@@ -96,6 +96,14 @@ $white: #fff;
 .container {
   width: 100%;
   padding: 0 16px;
+  @media screen and (min-width: 768px) {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  @media screen and (min-width: 1120px) {
+    max-width: 1056px;
+  }
 }
 
 .swiper {
@@ -105,9 +113,15 @@ $white: #fff;
     width: 12px;
     height: 12px;
     background-color: #dddddd;
-  }
-  &-active {
-    background-color: #b5b6bc;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    &-active {
+      background-color: #b5b6bc;
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -117,8 +131,12 @@ $white: #fff;
   &__header {
     height: 80px;
     background: linear-gradient(to right, $gray, $white);
-    padding-top: 16px;
     border-top: 2px solid $teal;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      height: 56px;
+    }
   }
 
   &__title {
@@ -130,6 +148,17 @@ $white: #fff;
 
   &__brands {
     padding-top: 16px;
+    @media screen and (min-width: 768px) {
+      padding-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 224px);
+      column-gap: 24px;
+      row-gap: 16px;
+    }
+    @media screen and (min-width: 1120px) {
+      grid-template-columns: repeat(4, 240px);
+      column-gap: 32px;
+    }
   }
 
   &__brand {
@@ -141,6 +170,17 @@ $white: #fff;
     &:active {
       transform: scale(0.9);
       transition: 0.1s;
+    }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      &:nth-last-child(-n + 5) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 1120px) {
+      &:nth-child(-n + 8) {
+        display: block;
+      }
     }
   }
 
@@ -160,4 +200,37 @@ $white: #fff;
     width: 40px;
     height: 40px;
   }
+}
+
+.show-more {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 9px;
+    &:active {
+      transform: scale(0.9);
+      transition: 0.1s;
+    }
+    &__icon {
+      width: 24px;
+      height: 24px;
+      background: url("../icons/bottom_arrows.svg") center / 8px 12px no-repeat;
+      &--rotated {
+        transform: rotate(180deg);
+        transition: 0.2s;
+      }
+    }
+    &__text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1b1c21;
+    }
+  }
+}
+
+.repair__brands--visible .repair__brand {
+  display: block;
 }
